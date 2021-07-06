@@ -13,6 +13,13 @@
     <description>An easy date and time tool</description>
     <url>https://github.com/JonZhang3</url>
 
+    <licenses>
+        <license>
+            <name>The MIT license</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
     <scm>
         <url>https://github.com/JonZhang3</url>
         <connection>https://github.com/JonZhang3/zoro-time.git</connection>

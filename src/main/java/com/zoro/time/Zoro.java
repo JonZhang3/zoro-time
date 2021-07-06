@@ -151,7 +151,8 @@ public final class Zoro implements Serializable, Comparable<Zoro>, Cloneable {
         return new Zoro(ZonedDateTime.of(date, time, zone));
     }
 
-    public static @NotNull Zoro create(int year, int month, int dayOfMonth, int hour, int minute, int second, int millSecond) {
+    public static @NotNull Zoro create(int year, int month, int dayOfMonth, int hour, int minute, int second,
+                                       int millSecond) {
         return new Zoro(ZonedDateTime.of(year, month, dayOfMonth,
             hour, minute, second, millSecond * 1000_000, ZoneId.systemDefault()));
     }
@@ -213,11 +214,11 @@ public final class Zoro implements Serializable, Comparable<Zoro>, Cloneable {
     }
 
     /**
-     * 获取当前时间所在的季度 <br/>
-     * 1~3 第一季度 <br/>
-     * 4~6 第二季度 <br/>
-     * 7~9 第三季度 <br/>
-     * 10~12 第四季度 <br/>
+     * 获取当前时间所在的季度 <br>
+     * 1~3 第一季度 <br>
+     * 4~6 第二季度 <br>
+     * 7~9 第三季度 <br>
+     * 10~12 第四季度 <br>
      *
      * @return 所在季度
      */
@@ -630,7 +631,8 @@ public final class Zoro implements Serializable, Comparable<Zoro>, Cloneable {
      * 比较两个时间的大小
      *
      * @param o 要比较的执行时间
-     * @return
+     * @return a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than
+     * the specified object.
      */
     @Override
     public int compareTo(@NotNull Zoro o) {
