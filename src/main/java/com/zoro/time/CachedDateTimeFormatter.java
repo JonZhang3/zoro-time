@@ -38,7 +38,7 @@ class CachedDateTimeFormatter {
         DateTimeFormatter formatter = CACHE.get(pattern);
         if (formatter == null) {
             formatter = DateTimeFormatter.ofPattern(pattern);
-            formatter = CACHE.putIfAbsent(pattern, formatter);
+            CACHE.putIfAbsent(pattern, formatter);
         }
         return formatter;
     }
